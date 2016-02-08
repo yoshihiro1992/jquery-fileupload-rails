@@ -14,12 +14,12 @@
 window.locale = {
     "fileupload": {
         "errors": {
-            "maxFileSize": "File is too big",
-            "minFileSize": "File is too small",
-            "acceptFileTypes": "Filetype not allowed",
-            "maxNumberOfFiles": "Max number of files exceeded",
-            "uploadedBytes": "Uploaded bytes exceed file size",
-            "emptyResult": "Empty file upload result"
+          "maxFileSize": "ファイルサイズが上限を超えています",
+          "minFileSize": "ファイルサイズが下限を下回っています",
+          "acceptFileTypes": "このファイル形式は送付できません",
+          "maxNumberOfFiles": "一度にアップロードできるファイル数は__です",
+          "uploadedBytes": "ファイルサイズが上限を超えています",
+          "emptyResult": "成功しました"
         },
         "error": "Error",
         "start": "Start",
