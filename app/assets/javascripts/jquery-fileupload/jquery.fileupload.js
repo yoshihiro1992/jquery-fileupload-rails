@@ -480,25 +480,27 @@
                         });
                     }
                 } else {
+                    // form使わない場合
                     if (that._isInstanceOf('FormData', options.formData)) {
                         formData = options.formData;
                     } else {
                         formData = new FormData();
                         $.each(this._getFormData(options), function (index, field) {
                             formData.append(field.name, field.value);
+                            // form使わない場合
                         });
                     }
                     if (options.blob) {
                         formData.append(paramName, options.blob, file.name);
                     } else {
+                        // form使わない場合
                         $.each(options.files, function (index, file) {
                             // This check allows the tests to run with
                             // dummy objects:
                             if (that._isInstanceOf('File', file) ||
                                     that._isInstanceOf('Blob', file)) {
                                 formData.append(
-                                    ($.type(options.paramName) === 'array' &&
-                                        options.paramName[index]) || paramName,
+                                    "file",
                                     file,
                                     file.uploadName || file.name
                                 );
